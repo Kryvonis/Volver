@@ -1,0 +1,44 @@
+html {
+background-image: url("images/bg.jpg");
+    -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+	color: white;
+
+}
+body {
+    
+}    
+input:link {
+    color: green;
+    background-color: transparent;
+    text-decoration: none;
+}
+input:visited {
+    color: pink;
+    background-color: transparent;
+    text-decoration: none;
+}
+input:hover {
+    color: white;
+    background-color: transparent;
+}
+
+a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: underline;
+	text-decoration:none;
+}
+
+a:active {
+    color: purple;
+    background-color: transparent;
+    text-decoration: underline;
+}
+a:hover {
+    color: white;
+    background-color: black;
+    text-decoration: underline;
+}

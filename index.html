@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<title>Volver</title>
+<head profile="This is profile">
+    <meta charset="utf-8" />
+    <link rel='shortcut icon'  href='favicon.ico' type='image/x-icon'/>
+    <link rel="stylesheet" href="style.css" type="text/css" />
+    
+
+</head>
+<body>
+
+
+<table>
+<tr>
+	<th>
+		<p>Username &nbsp;<input type="text" id="username" style="width:160px;" value="dgc1"> </p>
+		<p>Shanghai Beauty</p>
+			<input type="button" onclick="launchMobileGame('');" style="height:100px;width:300px;" value="Mobile" >
+			
+			<input type="button" onclick="launchPCGame('');" style="height:100px;width:300px;" value="PC" >
+	</th>
+	<th>
+		<p>Previous versions</p>
+		<p>ShanghaiBeauty20160722.2</p>
+			<input type="button" onclick="launchMobileGame('20160722.2');" style="height:30px;width:100px" value="Mobile" >
+			<input type="button" onclick="launchPCGame('20160722.2');" style="height:30px;width:100px;" value="PC" >
+			
+		<p>ShanghaiBeauty20160721.4</p>
+			<input type="button" onclick="launchMobileGame('20160721.4');" style="height:30px;width:100px" value="Mobile" >
+			<input type="button" onclick="launchPCGame('20160721.4');" style="height:30px;width:100px;" value="PC" >
+		
+		<p>Shanghai Beauty 1.3.6</p>
+
+			<input type="button" onclick="launchMobileGame('1.3.6');" style="height:30px;width:100px;" value="Mobile" >
+			<input type="button" onclick="launchPCGame('1.3.6');" style="height:30px;width:100px;" value="PC" >
+		
+		<p>Shanghai Beauty 1.3.5</p>
+
+			<input type="button" onclick="launchMobileGame('1.3.5');" style="height:30px;width:100px;" value="Mobile" >
+			<input type="button" onclick="launchPCGame('1.3.5');" style="height:30px;width:100px;" value="PC" >
+			
+		<p>Shanghai Beauty 1.3.2</p>
+
+			<input type="button" onclick="launchMobileGame('1.3.2');" style="height:30px;width:100px" value="Mobile" >
+			<input type="button" onclick="launchPCGame('1.3.2');" style="height:30px;width:100px;" value="PC" >
+			
+	</th>
+ </tr>  
+    
+ </table>   
+<script>
+    var strWindowFeatures = "menubar=yes,location=yes,resizable=yes,scrollbars=yes,status=yes";
+
+function launchMobileGame(version){
+        var username = document.getElementById('username').value;
+        var urlMobile = "https://mobilewebserver9-mobiledgcqa.installprogram.eu/MobileWebGames/game/mgs/5_1_0?lobbyURL=https%3A%2F%2Fmobilewebserver9-mobiledgcqa.installprogram.eu%2FLobby%2Fen%2FIslandParadise%2FGames%2FnewGames&moduleID=10025&clientID=40307&gameName=shanghaibeauty"+version+"&gameTitle=shanghaibeauty&LanguageCode=en&clientTypeID=40&casinoID=5007&lobbyName=IslandParadise&loginType=PlayerService&bankingURL=https%3A%2F%2Fmobilewebserver9-mobiledgcqa.installprogram.eu%2FLobby%2Fen%2FIslandParadise%2FBanking&xmanEndPoints=https%3A%2F%2Fmobilewebserver9-mobiledgcqa.installprogram.eu%2FXMan%2Fx.x&routerEndPoints=&disablePoweredBy=false&currencyFormat=&isPracticePlay=false&logoutURL=https%3A%2F%2Fmobilewebserver9-mobiledgcqa.installprogram.eu%2FLobby%2Fen%2FIslandParadise%2FLogoutisPracticePlay=false&username="+username+"&password=test"
+
+        newwindow = window.open(urlMobile, "Shanghai Beauty for Mobile",strWindowFeatures);
+        if (window.focus) {newwindow.focus()}
+        return false;
+  }
+
+  function launchPCGame(version){
+        var username = document.getElementById('username').value;
+        var urlPC = "https://mobilewebserver9-mobiledgcqa.installprogram.eu/MobileWebGames/game/mgs/5_1_0?lobbyURL=https%3A%2F%2Fmobilewebserver9-mobiledgcqa.installprogram.eu%2FLobby%2Fen%2FIslandParadise%2FGames%2FnewGames&moduleID=10025&clientID=50300&gameName=shanghaibeauty"+version+"&gameTitle=shanghaibeauty&LanguageCode=en&clientTypeID=40&casinoID=5007&lobbyName=IslandParadise&loginType=PlayerService&bankingURL=https%3A%2F%2Fmobilewebserver9-mobiledgcqa.installprogram.eu%2FLobby%2Fen%2FIslandParadise%2FBanking&xmanEndPoints=https%3A%2F%2Fmobilewebserver9-mobiledgcqa.installprogram.eu%2FXMan%2Fx.x&routerEndPoints=&disablePoweredBy=false&currencyFormat=&isPracticePlay=false&logoutURL=https%3A%2F%2Fmobilewebserver9-mobiledgcqa.installprogram.eu%2FLobby%2Fen%2FIslandParadise%2FLogoutisPracticePlay=false&username="+username+"&password=test"
+
+        window.open(urlPC, "Shanghai Beauty for Mobile",strWindowFeatures);
+  }
+
+  function launchMobile(){
+        var username = document.getElementById('username').value;
+        var urlMobile = "https://mobilewebserver9-mobiledgcqa.installprogram.eu/MobileWebGames/game/mgs/5_1_0?lobbyURL=https%3A%2F%2Fmobilewebserver9-mobiledgcqa.installprogram.eu%2FLobby%2Fen%2FIslandParadise%2FGames%2FnewGames&moduleID=10025&clientID=40307&gameName=shanghaibeauty&gameTitle=shanghaibeauty&LanguageCode=en&clientTypeID=40&casinoID=5007&lobbyName=IslandParadise&loginType=PlayerService&bankingURL=https%3A%2F%2Fmobilewebserver9-mobiledgcqa.installprogram.eu%2FLobby%2Fen%2FIslandParadise%2FBanking&xmanEndPoints=https%3A%2F%2Fmobilewebserver9-mobiledgcqa.installprogram.eu%2FXMan%2Fx.x&routerEndPoints=&disablePoweredBy=false&currencyFormat=&isPracticePlay=false&logoutURL=https%3A%2F%2Fmobilewebserver9-mobiledgcqa.installprogram.eu%2FLobby%2Fen%2FIslandParadise%2FLogoutisPracticePlay=false&username="+username+"&password=test"
+
+        newwindow = window.open(urlMobile, "Shanghai Beauty for Mobile",strWindowFeatures);
+        if (window.focus) {newwindow.focus()}
+        return false;
+  }
+
+  function launchPC(){
+        var username = document.getElementById('username').value;
+        var urlPC = "https://mobilewebserver9-mobiledgcqa.installprogram.eu/MobileWebGames/game/mgs/5_1_0?lobbyURL=https%3A%2F%2Fmobilewebserver9-mobiledgcqa.installprogram.eu%2FLobby%2Fen%2FIslandParadise%2FGames%2FnewGames&moduleID=10025&clientID=50300&gameName=shanghaibeauty&gameTitle=shanghaibeauty&LanguageCode=en&clientTypeID=40&casinoID=5007&lobbyName=IslandParadise&loginType=PlayerService&bankingURL=https%3A%2F%2Fmobilewebserver9-mobiledgcqa.installprogram.eu%2FLobby%2Fen%2FIslandParadise%2FBanking&xmanEndPoints=https%3A%2F%2Fmobilewebserver9-mobiledgcqa.installprogram.eu%2FXMan%2Fx.x&routerEndPoints=&disablePoweredBy=false&currencyFormat=&isPracticePlay=false&logoutURL=https%3A%2F%2Fmobilewebserver9-mobiledgcqa.installprogram.eu%2FLobby%2Fen%2FIslandParadise%2FLogoutisPracticePlay=false&username="+username+"&password=test"
+
+        window.open(urlPC, "Shanghai Beauty for Mobile",strWindowFeatures);
+  }
+
+  //var mobile = launchMobileGame(username);
+  //var pc = launchPCGame(username);
+
+  //document.getElementById("mobile").setAttribute("href",mobile);
+  //document.getElementById("pc").setAttribute("href",pc);
+    </script>
+</body>
+</html>
