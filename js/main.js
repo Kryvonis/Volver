@@ -1,5 +1,10 @@
 var strWindowFeatures = "menubar=yes,location=yes,resizable=yes,scrollbars=yes,status=yes";
 
+function openNewTab(url){
+        window.open(url, url, strWindowFeatures);
+  }
+
+
 function launchMobile(version){
         var username = document.getElementById('userId').value;
         var urlMobile = "https://mobilewebserver9-mobiledgcqa.installprogram.eu/MobileWebGames/game/mgs/5_1_0?lobbyURL=https%3A%2F%2Fmobilewebserver9-mobiledgcqa.installprogram.eu%2FLobby%2Fen%2FIslandParadise%2FGames%2FnewGames&moduleID=10025&clientID=40307&gameName=shanghaibeauty"+version+"&gameTitle=shanghaibeauty&LanguageCode=en&clientTypeID=40&casinoID=5007&lobbyName=IslandParadise&loginType=PlayerService&bankingURL=https%3A%2F%2Fmobilewebserver9-mobiledgcqa.installprogram.eu%2FLobby%2Fen%2FIslandParadise%2FBanking&xmanEndPoints=https%3A%2F%2Fmobilewebserver9-mobiledgcqa.installprogram.eu%2FXMan%2Fx.x&routerEndPoints=&disablePoweredBy=false&currencyFormat=&isPracticePlay=false&logoutURL=https%3A%2F%2Fmobilewebserver9-mobiledgcqa.installprogram.eu%2FLobby%2Fen%2FIslandParadise%2FLogoutisPracticePlay=false&username="+username+"&password=test"

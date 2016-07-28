@@ -1,51 +1,8 @@
 <!DOCTYPE html>
 <html>
-    <style>
-body {
-    font-family: "Lato", sans-serif;
-}
 
-.sidenav {
-    height: 100%;
-    width: 0;
-    position: fixed;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    background-color: #111;
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
-}
-
-.sidenav a {
-    padding: 8px 8px 8px 32px;
-    text-decoration: none;
-    font-size: 25px;
-    color: #818181;
-    display: block;
-    transition: 0.3s
-}
-
-.sidenav a:hover, .offcanvas a:focus{
-    color: #f1f1f1;
-}
-
-.closebtn {
-    position: absolute;
-    top: 0;
-    right: 25px;
-    font-size: 36px !important;
-    margin-left: 50px;
-}
-
-@media screen and (max-height: 450px) {
-  .sidenav {padding-top: 15px;}
-  .sidenav a {font-size: 18px;}
-}
-</style>
     
-<title>evolver</title>
+<title>Evolver</title>
 <head profile="This is profile">
     <meta charset="utf-8" />
     <meta charset="utf-8">
@@ -61,10 +18,14 @@ body {
 </head>
 <body>
 <span style="font-size:30px;cursor:pointer" onclick="openNav()">☰ Tools</span>
-    <!-- Start Main Body Section -->
-        <div class="mainbody-section text-center">
-            <div class="container">
-                <div class="row">
+<audio controls>
+  <source src="The National - Firергооf.mp3" type="audio/mpeg">
+  <source src="Ratatat - Abrasive.mp3" type="audio/ogg">
+  
+Your browser does not support the audio element.
+</audio>    <!-- Start Main Body Section -->
+    <div id="body">
+                <div id="row">
                     <div class="col-md-3">    
                         <h1>Shanghai Beauty</h1>
                         <p>Username &nbsp;<input type="text" id="userId" style="height:50px;width:300px;" value="dgc1"> </p>
@@ -73,9 +34,95 @@ body {
                             <input type="button" onclick="launchPC('');" style="height:100px;width:300px;" value="PC">
                     </div>    
                 </div>
-                <div class="row">
+                <div id="row">
                     <div class="col-md-3">
-                        <h1>Bug Template</h1>
+                        <h1>Previous versions</h1>     
+                        <p>ShanghaiBeauty20160727.1</p>
+                            <input type="button" onclick="launchMobileGame('20160727.1');" style="height:100px;width:300px;" value="Mobile" >
+                            <input type="button" onclick="launchPCGame('20160727.1');" style="height:100px;width:300px;" value="PC" >
+                        <p>ShanghaiBeauty20160726.17</p>
+                            <input type="button" onclick="launchMobileGame('20160726.17');" style="height:30px;width:100px" value="Mobile" >
+                            <input type="button" onclick="launchPCGame('20160726.17');" style="height:30px;width:100px;" value="PC" >
+
+                        <p>ShanghaiBeauty20160725.2</p>
+                            <input type="button" onclick="launchMobileGame('20160725.2');" style="height:30px;width:100px" value="Mobile" >
+                            <input type="button" onclick="launchPCGame('20160725.2');" style="height:30px;width:100px;" value="PC" >
+
+                        <p>ShanghaiBeauty20160723.2</p>
+                            <input type="button" onclick="launchMobileGame('20160723.2');" style="height:30px;width:100px" value="Mobile" >
+                            <input type="button" onclick="launchPCGame('20160723.2');" style="height:30px;width:100px;" value="PC" >
+
+                        <p>ShanghaiBeauty RC0</p>
+                            <input type="button" onclick="launchMobileGame('RC0');" style="height:30px;width:100px" value="Mobile" >
+                            <input type="button" onclick="launchPCGame('RC0');" style="height:30px;width:100px;" value="PC" > 
+
+                        <p>ShanghaiBeauty20160722.2</p>
+                            <input type="button" onclick="launchMobileGame('20160722.2');" style="height:30px;width:100px" value="Mobile" >
+                            <input type="button" onclick="launchPCGame('20160722.2');" style="height:30px;width:100px;" value="PC" >
+
+                        <p>ShanghaiBeauty20160721.4</p>
+                            <input type="button" onclick="launchMobileGame('20160721.4');" style="height:30px;width:100px" value="Mobile" >
+                            <input type="button" onclick="launchPCGame('20160721.4');" style="height:30px;width:100px;" value="PC" >
+
+                        <p>Shanghai Beauty 1.3.2</p>
+
+                            <input type="button" onclick="launchMobileGame('1.3.2');" style="height:30px;width:100px" value="Mobile" >
+                            <input type="button" onclick="launchPCGame('1.3.2');" style="height:30px;width:100px;" value="PC" >
+
+                        <p>Shanghai Beauty 1.3.5</p>
+
+                            <input type="button" onclick="launchMobileGame('1.3.5');" style="height:30px;width:100px;" value="Mobile" >
+                            <input type="button" onclick="launchPCGame('1.3.5');" style="height:30px;width:100px;" value="PC" >
+
+                        <p>Shanghai Beauty 1.3.6</p>
+
+                            <input type="button" onclick="launchMobileGame('1.3.6');" style="height:30px;width:100px;" value="Mobile" >
+                            <input type="button" onclick="launchPCGame('1.3.6');" style="height:30px;width:100px;" value="PC" >
+
+                    </div>    
+                </div>
+                <div id="row">
+                    <div class="col-md-3">
+                        <h1>MAHI GAMING - Game Launcher v 1.0</h1>
+                        <p>Username &nbsp;<input type="text" id="username" style="width:160px;" value="dgc25"> </p>
+                        <p>Password &nbsp;<input type="text" id="password" style="width:160px;" value="test"> </p>
+                        <p>Game Name &nbsp;<input type="text" id="gameName" style="width:160px;" value="ShanghaiBeauty"> </p>
+                        <p>Game Title &nbsp;<input type="text" id="gameTitle" style="width:160px;" value="Shanghai+Beauty+0713D"> </p>
+                        <p>Module Id &nbsp;<input type="text" id="moduleId" style="width:160px;" value="10025"> </p>
+                        <p>Client Id &nbsp;<input type="text" id="clientId" style="width:160px;" value="40307"> </p>
+                        <p>Language Code &nbsp;<input type="text" id="languageCode" style="width:160px;" value="en"> </p>
+                        <p>Client Type &nbsp;<input type="text" id="clientTypeId" style="width:160px;" value="40"> </p>
+                        <p>Casino Id &nbsp;<input type="text" id="casinoId" style="width:160px;" value="5001"> </p>
+                        <p>Lobby Name &nbsp;<input type="text" id="lobbyName" style="width:160px;" value="IslandParadise"> </p>
+                        <p>Login Type &nbsp;<input type="text" id="loginType" style="width:160px;" value="PlayerService"> </p>
+                        <p>XMan End Points &nbsp;<input type="text" id="xmanEndPoints" style="width:160px;" value="https%3A%2F%2Fmobilewebserver9-mobiledgcqa.installprogram.eu%2FXMan%2Fx.x"> </p>
+                        <p>Router End Points &nbsp;<input type="text" id="routerEndPoints" style="width:160px;" value=""> </p>
+                        <p>Disable Powered By &nbsp;<input type="text" id="disablePoweredBy" style="width:160px;" value="false"> </p>
+                        <p>Currency Format &nbsp;<input type="text" id="currencyFormat" style="width:160px;" value=""> </p>
+                        <p>Is Practice Play &nbsp;<input type="text" id="isPracticePlay" style="width:160px;" value="false"> </p>
+                        <p>Base URL &nbsp;<input type="text" id="baseURL" style="width:200px;" value="https://mobilewebserver9-mobiledgcqa.installprogram.eu/MobileWebGames/game/mgs/5_1_0?"> </p>
+                        <p>Lobby URL &nbsp;<input type="text" id="lobbyURL" style="width:160px;" value=""> </p>
+                        <p>Banking URL &nbsp;<input type="text" id="bankingURL" style="width:160px;" value=""> </p>
+                        <input type="button" onclick="launchGame();" style="height:50px;width:160px;" value="Launch" >
+                </div>
+            </div> 
+    
+    </div>
+    
+    
+    <div id="container">
+    <div id="mySidenav" class="sidenav">
+        <p href="javascript:void(0)" class="closebtn" onclick="closeNav()">✖</p>
+        <a onclick="openNewTab('https://diggc.sharepoint.com/Shared%20Documents/DGC%20Production/Product%20Deliverables/7.%20Shanghai%20Beauty/Internal');">Docs Sharepoint</a>
+        <a onclick="openNewTab('http://apps02:8080/tfs/_home');">TFS</a>
+        <a onclick="openNewTab('http://apps01:8080/secure/Dashboard.jspa');">Jira</a>
+        <a onclick="openNewTab('http://apps02/Wiki/index.php?title=Main_Page');">Wiki DGC</a>
+        <a onclick="openNewTab('https://mobilewebserver9-mobiledgcqa.installprogram.eu/Lobby/en/IslandParadise/games/newgames');">Island Paradise Web9</a>
+        <a onclick="openNewTab('http://casinoas1/DGC_Tools/WebForms/UploadAutomatedForm.aspx');">Upload Test Data</a>
+        <a onclick="openNewTab('http://casinoas1/DGC_Tools/WebForms/BalanceSetterForm.aspx');">Balance Update</a>
+        <a onclick="openNewTab('http://webserver8/betsize');">BetSize</a>
+        
+        <p>TFS Bugs Template</p>
                         <p><textarea class="js-copytextarea" style="height:100px;width:295px;">Title:Build YYYYMMDD.V – {Test Suite} – {Summary}
 Repro Steps
 
@@ -108,94 +155,51 @@ Test data:
 Attachments:
                             </textarea></p>
                         <p><input type="button" class="js-textareacopybtn" value="Copy to Clipboard" style="height:50px;width:300px;"></p>
-                        <script>
-                            var copyTextareaBtn = document.querySelector('.js-textareacopybtn');
-
-                            copyTextareaBtn.addEventListener('click', function(event) {
-                              var copyTextarea = document.querySelector('.js-copytextarea');
-                              copyTextarea.select();
-
-                              try {
-                                var successful = document.execCommand('copy');
-                                var msg = successful ? 'successful' : 'unsuccessful';
-                                console.log('Copying text command was ' + msg);
-                              } catch (err) {
-                                console.log('Oops, unable to copy');
-                              }
-                            });
-                        </script>
-
-                    </div>    
-                </div>
-                <div class="row">
-                    <div class="col-md-3">
-                        <h1>Previous versions</h1>     
-                        <p>ShanghaiBeauty RC0</p>
-                            <input type="button" onclick="launchMobile('RC0');" style="height:30px;width:100px" value="Mobile" >
-                            <input type="button" onclick="launchPC('RC0');" style="height:30px;width:100px;" value="PC" > 
-                        <p>ShanghaiBeauty20160723.2</p>
-                            <input type="button" onclick="launchMobile('20160722.2');" style="height:30px;width:100px" value="Mobile" >
-                            <input type="button" onclick="launchPC('20160722.2');" style="height:30px;width:100px;" value="PC" >        
-                        <p>ShanghaiBeauty20160722.2</p>
-                            <input type="button" onclick="launchMobile('20160722.2');" style="height:30px;width:100px" value="Mobile" >
-                            <input type="button" onclick="launchPC('20160722.2');" style="height:30px;width:100px;" value="PC" >			
-                        <p>ShanghaiBeauty20160721.4</p>
-                            <input type="button" onclick="launchMobile('20160721.4');" style="height:30px;width:100px" value="Mobile" >
-                            <input type="button" onclick="launchPC('20160721.4');" style="height:30px;width:100px;" value="PC" >		
-                        <p>Shanghai Beauty 1.3.6</p>
-                            <input type="button" onclick="launchMobile('1.3.6');" style="height:30px;width:100px;" value="Mobile" >
-                            <input type="button" onclick="launchPC('1.3.6');" style="height:30px;width:100px;" value="PC" >		
-                        <p>Shanghai Beauty 1.3.5</p>
-                            <input type="button" onclick="launchMobile('1.3.5');" style="height:30px;width:100px;" value="Mobile" >
-                            <input type="button" onclick="launchPC('1.3.5');" style="height:30px;width:100px;" value="PC" >			
-                        <p>Shanghai Beauty 1.3.2</p>
-                            <input type="button" onclick="launchMobile('1.3.2');" style="height:30px;width:100px" value="Mobile" >
-                            <input type="button" onclick="launchPC('1.3.2');" style="height:30px;width:100px;" value="PC" >
-                
-                    </div>    
-                </div>
-
-                    <h1>MAHI GAMING - Game Launcher v 1.0</h1>
-                    <p>Username &nbsp;<input type="text" id="username" style="width:160px;" value="dgc25"> </p>
-                    <p>Password &nbsp;<input type="text" id="password" style="width:160px;" value="test"> </p>
-                    <p>Game Name &nbsp;<input type="text" id="gameName" style="width:160px;" value="ShanghaiBeauty"> </p>
-                    <p>Game Title &nbsp;<input type="text" id="gameTitle" style="width:160px;" value="Shanghai+Beauty+0713D"> </p>
-                    <p>Module Id &nbsp;<input type="text" id="moduleId" style="width:160px;" value="10025"> </p>
-                    <p>Client Id &nbsp;<input type="text" id="clientId" style="width:160px;" value="40307"> </p>
-                    <p>Language Code &nbsp;<input type="text" id="languageCode" style="width:160px;" value="en"> </p>
-                    <p>Client Type &nbsp;<input type="text" id="clientTypeId" style="width:160px;" value="40"> </p>
-                    <p>Casino Id &nbsp;<input type="text" id="casinoId" style="width:160px;" value="5001"> </p>
-                    <p>Lobby Name &nbsp;<input type="text" id="lobbyName" style="width:160px;" value="IslandParadise"> </p>
-                    <p>Login Type &nbsp;<input type="text" id="loginType" style="width:160px;" value="PlayerService"> </p>
-                    <p>XMan End Points &nbsp;<input type="text" id="xmanEndPoints" style="width:160px;" value="https%3A%2F%2Fmobilewebserver9-mobiledgcqa.installprogram.eu%2FXMan%2Fx.x"> </p>
-                    <p>Router End Points &nbsp;<input type="text" id="routerEndPoints" style="width:160px;" value=""> </p>
-                    <p>Disable Powered By &nbsp;<input type="text" id="disablePoweredBy" style="width:160px;" value="false"> </p>
-                    <p>Currency Format &nbsp;<input type="text" id="currencyFormat" style="width:160px;" value=""> </p>
-                    <p>Is Practice Play &nbsp;<input type="text" id="isPracticePlay" style="width:160px;" value="false"> </p>
-                    <p>Base URL &nbsp;<input type="text" id="baseURL" style="width:600px;" value="https://mobilewebserver9-mobiledgcqa.installprogram.eu/MobileWebGames/game/mgs/5_1_0?"> </p>
-                    <p>Lobby URL &nbsp;<input type="text" id="lobbyURL" style="width:160px;" value=""> </p>
-                    <p>Banking URL &nbsp;<input type="text" id="bankingURL" style="width:160px;" value=""> </p>
-                    <input type="button" onclick="launchGame();" style="height:50px;width:160px;" value="Launch" >
-                
-         </div>
+        
     </div>
+        <script>
+              var copyTextareaBtn = document.querySelector('.js-textareacopybtn');
 
+              copyTextareaBtn.addEventListener('click', function(event) {
+                  var copyTextarea = document.querySelector('.js-copytextarea');
+                  copyTextarea.select();
+
+                  try {
+                    var successful = document.execCommand('copy');
+                    var msg = successful ? 'successful' : 'unsuccessful';
+                    console.log('Copying text command was ' + msg);
+                  } catch (err) {
+                    console.log('Oops, unable to copy');
+                  }
+              });
+
+            function openNav() {
+                document.getElementById("mySidenav").style.width = "350px";
+            }
+
+            function closeNav() {
+                document.getElementById("mySidenav").style.width = "0";
+            }
+        </script>
+    </div>
+    <div id="footer">
+        <p> .....</p>
+        <p>Please leave your feedback or suggestion! </p>           
+        <textarea id="myText" type="text" style="height:100px;width:300px;"> Hi,
+I would like to suggest to improve/add: </textarea>
+        <p><input onclick="sendMail(); return false" type="submit" value="Sent this as an email" style="height:30px;width:300px;"/></p>
     
-    <div id="mySidenav" class="sidenav">
-      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-      <a href="#">About</a>
-      <a href="#">Services</a>
-      <a href="#">Clients</a>
-      <a href="#">Contact</a>
     </div>
-    <script>
-        function openNav() {
-            document.getElementById("mySidenav").style.width = "250px";
-        }
+    <script>            
+        function sendMail() {
+            var link = "mailto:pavlok@digitalgamingcorp.com"
+                     + "&subject=" + escape("Evolver: Feedback")
+                     + "&body=" + escape(document.getElementById('myText').value)
+            ;
 
-        function closeNav() {
-            document.getElementById("mySidenav").style.width = "0";
+            window.location.href = link;
         }
+    
     </script>
     
 </body>
